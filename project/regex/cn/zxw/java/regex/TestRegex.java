@@ -23,4 +23,13 @@ public class TestRegex {
 		Matcher matcher = pattern.matcher(str);
 		assertTrue(matcher.matches());
 	}
+	@Test
+	public void test2() {
+		String log="/log?type=click&cuid=73B0320A35DF4BE3B7A84DC584016C72&device=Xiaomi_2014812&did=33&iid=8&imi=Iz99TCJanvu6VJVd3lHf/Q==&url=http://www.baidu.com&nocache=0.5464766153600067 HTTP/1.1";
+		Pattern pattern=Pattern.compile(
+		"([\\w\\.\\?/&=:]+)\\s+.*");
+		Matcher matcher=pattern.matcher(log);
+		assertTrue(matcher.matches());
+
+	}
 }
